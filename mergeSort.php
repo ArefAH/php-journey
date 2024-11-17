@@ -29,5 +29,14 @@ function merge($left, $right){
             $mergeLeftIndex += 1;
         }
     }
-}
+    while ($mergeLeftIndex < count($left)) {
+        $result[] = $left[$mergeLeftIndex];
+        $mergeLeftIndex += 1;
+    }
+    while ($mergeRightIndex < count($right)) {
+        $result[] = $right[$mergeRightIndex];
+        $mergeRightIndex += 1;
+    }
+    return $result;
+}   
 ?>
