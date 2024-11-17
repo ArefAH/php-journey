@@ -28,6 +28,17 @@ class LinkedList {
             $current->next = $newNode;
         }
     }
+
+    private function countVowels($string) {
+        $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        $count = 0;
+        for ($i = 0; $i < strlen($string); $i++) {
+            if (in_array($string[$i], $vowels)) {
+                $count++;
+            }
+        }
+        return $count;
+    }
 }
 
 ?>
