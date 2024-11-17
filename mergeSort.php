@@ -14,4 +14,20 @@ function mergeSort(array $array){
 
     return merge($mergeLeft, $mergeRight);
 }
+
+function merge($left, $right){
+    $result = [];
+    $mergeLeftIndex = 0;
+    $mergeRightIndex = 0;
+
+    while ($mergeLeftIndex < count($left) && $mergeRightIndex < count($right)) {
+        if ($left[$mergeLeftIndex] > $right[$mergeRightIndex]) {
+            $result[] = $right[$mergeRightIndex];
+            $mergeRightIndex += 1;
+        } elseif ($left[$mergeLeftIndex] < $right[$mergeRightIndex]) {
+            $result[] = $left[$mergeLeftIndex];
+            $mergeLeftIndex += 1;
+        }
+    }
+}
 ?>
