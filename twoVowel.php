@@ -9,5 +9,12 @@ class Node {
     }
 }
 
+class LinkedList {
+    public $head;
+
+    public function __construct() {
+        $this->head = null;
+    }
+}
 
 ?>
