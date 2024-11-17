@@ -39,4 +39,5 @@ function merge($left, $right){
     }
     return $result;
 }   
+echo implode(', ', mergeSort($numbers));
 ?>
