@@ -51,4 +51,10 @@ class LinkedList {
     }
 }
 
+$list = new LinkedList();
+$list->add("kayak");
+$list->add("note");
+$list->add("yes");
+$list->twoVowels();
+
 ?>
