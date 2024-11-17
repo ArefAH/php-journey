@@ -39,6 +39,16 @@ class LinkedList {
         }
         return $count;
     }
+
+    public function twoVowels() {
+        $current = $this->head;
+        while ($current !== null) {
+            if ($this->countVowels($current->value) === 2) {
+                echo $current->value . ", ";
+            }
+            $current = $current->next;
+        }
+    }
 }
 
 ?>
