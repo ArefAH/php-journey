@@ -9,6 +9,11 @@ class User {
         $this->email = $email;
         $this->password = $password;
     }
+
+    public static function checkPassword($password) {
+        return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{12,}$/', $password);
+    }
+    
 }
 
 ?>
